@@ -506,7 +506,6 @@ html.menu-open .header__menu {
 }
 
 .treendy {
-  padding-top: 112px;
   padding-bottom: 151px;
 }
 
@@ -522,7 +521,6 @@ html.menu-open .header__menu {
   font-family: "COXXON Font";
   font-style: normal;
   font-weight: 400;
-  margin-bottom: 36px;
 }
 
 .treendy__subtitle {
@@ -531,7 +529,12 @@ html.menu-open .header__menu {
   line-height: 22px;
   color: #011B32;
   max-width: 316px;
-  margin-bottom: 45px;
+}
+
+.treendy__star {
+  width: 100%;
+  max-width: 61px;
+  height: auto;
 }
 
 .treendy__collection__title {
@@ -547,8 +550,8 @@ html.menu-open .header__menu {
 .treendy__gallery {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 0.5fr 0.5fr;
+  grid-template-columns: 1fr 0.5fr 0.5fr;
   gap: 39px;
 }
 
@@ -559,13 +562,12 @@ html.menu-open .header__menu {
 
 .treendy__item__first {
   position: relative;
-  width: 589px;
 }
 
 .treendy__item__first .treendy__item__block {
   position: absolute;
   top: 25%;
-  right: -30%;
+  right: -35%;
 }
 
 .treendy__item__second {
@@ -574,14 +576,22 @@ html.menu-open .header__menu {
       align-self: flex-end;
 }
 
+.treendy__item__second [class*=__image] {
+  max-width: 344px;
+}
+
 .treendy__item__second .treendy__item__block {
   position: absolute;
-  right: -60%;
+  right: -75%;
   bottom: 0;
 }
 
 .treendy__item__third {
   position: relative;
+}
+
+.treendy__item__third [class*=__image] {
+  max-width: 344px;
 }
 
 .treendy__item__third .treendy__item__block {
@@ -594,7 +604,6 @@ html.menu-open .header__menu {
   font-family: "COXXON Font";
   font-style: normal;
   font-weight: 400;
-  font-size: 25px;
   line-height: 35px;
   color: #000000;
   margin-bottom: 9px;
@@ -604,7 +613,6 @@ html.menu-open .header__menu {
   font-family: "COXXON Font";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
   line-height: 28px;
   color: #000000;
   margin-bottom: 9px;
@@ -749,6 +757,10 @@ html.menu-open .header__menu {
     min-height: 30rem;
   }
 
+  .treendy {
+    padding-top: 7rem;
+  }
+
   .treendy__title {
     font-size: 5rem;
   }
@@ -757,12 +769,28 @@ html.menu-open .header__menu {
     line-height: 7.5rem;
   }
 
+  .treendy__title {
+    margin-bottom: 2.25rem;
+  }
+
+  .treendy__subtitle {
+    margin-bottom: 2.8125rem;
+  }
+
   .treendy__collection__title {
     font-size: 5rem;
   }
 
   .treendy__collection__title {
     line-height: 7.5rem;
+  }
+
+  .treendy__item__block .item__block__title {
+    font-size: 1.5625rem;
+  }
+
+  .treendy__item__block .item__block__price {
+    font-size: 1.25rem;
   }
 
   .treendy__link {
@@ -879,6 +907,10 @@ html.menu-open .header__menu {
     min-height: 11.25rem;
   }
 
+  .treendy {
+    padding-top: 3.125rem;
+  }
+
   .treendy__title {
     font-size: 2.5rem;
   }
@@ -887,12 +919,28 @@ html.menu-open .header__menu {
     line-height: 4.375rem;
   }
 
+  .treendy__title {
+    margin-bottom: 0.9375rem;
+  }
+
+  .treendy__subtitle {
+    margin-bottom: 1.25rem;
+  }
+
   .treendy__collection__title {
     font-size: 2.5rem;
   }
 
   .treendy__collection__title {
     line-height: 4.375rem;
+  }
+
+  .treendy__item__block .item__block__title {
+    font-size: 0.9375rem;
+  }
+
+  .treendy__item__block .item__block__price {
+    font-size: 0.625rem;
   }
 
   .treendy__link {
@@ -1016,6 +1064,86 @@ html.menu-open .header__menu {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     gap: 25px;
+  }
+
+  .treendy__text {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 50px;
+  }
+
+  .treendy__gallery {
+    -ms-grid-columns: 1fr 0.5fr;
+    grid-template-columns: 1fr 0.5fr;
+    gap: 15px;
+  }
+
+  .treendy__item__first {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .treendy__item__first .treendy__item__block {
+    position: relative;
+    top: unset;
+    right: unset;
+  }
+
+  .treendy__item__second {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+
+  .treendy__item__second .treendy__item__block {
+    position: relative;
+    right: unset;
+  }
+
+  .treendy__item__third {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+  }
+
+  .treendy__item__third {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 15px;
+  }
+
+  .treendy__item__third .treendy__item__block {
+    position: relative;
+    top: unset;
+    right: unset;
+  }
+
+  .treendy__link {
+    top: unset;
+    bottom: 0;
   }
 }
 
@@ -1326,6 +1454,18 @@ html.menu-open .header__menu {
     }
 }
 
+@supports (padding-top: clamp( 3.125rem , 1.8972772277rem  +  6.1386138614vw , 7rem )) {
+    .treendy {
+      padding-top: clamp( 3.125rem , 1.8972772277rem  +  6.1386138614vw , 7rem );
+    }
+}
+
+@supports not (padding-top: clamp( 3.125rem , 1.8972772277rem  +  6.1386138614vw , 7rem )) {
+    .treendy {
+      padding-top: calc(3.125rem + 3.875 * (100vw - 20rem) / 63.125);
+    }
+}
+
 @supports (font-size: clamp( 2.5rem , 1.7079207921rem  +  3.9603960396vw , 5rem )) {
     .treendy__title {
       font-size: clamp( 2.5rem , 1.7079207921rem  +  3.9603960396vw , 5rem );
@@ -1350,6 +1490,30 @@ html.menu-open .header__menu {
     }
 }
 
+@supports (margin-bottom: clamp( 0.9375rem , 0.5216584158rem  +  2.0792079208vw , 2.25rem )) {
+    .treendy__title {
+      margin-bottom: clamp( 0.9375rem , 0.5216584158rem  +  2.0792079208vw , 2.25rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 0.9375rem , 0.5216584158rem  +  2.0792079208vw , 2.25rem )) {
+    .treendy__title {
+      margin-bottom: calc(0.9375rem + 1.3125 * (100vw - 20rem) / 63.125);
+    }
+}
+
+@supports (margin-bottom: clamp( 1.25rem , 0.754950495rem  +  2.4752475248vw , 2.8125rem )) {
+    .treendy__subtitle {
+      margin-bottom: clamp( 1.25rem , 0.754950495rem  +  2.4752475248vw , 2.8125rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 1.25rem , 0.754950495rem  +  2.4752475248vw , 2.8125rem )) {
+    .treendy__subtitle {
+      margin-bottom: calc(1.25rem + 1.5625 * (100vw - 20rem) / 63.125);
+    }
+}
+
 @supports (font-size: clamp( 2.5rem , 1.7079207921rem  +  3.9603960396vw , 5rem )) {
     .treendy__collection__title {
       font-size: clamp( 2.5rem , 1.7079207921rem  +  3.9603960396vw , 5rem );
@@ -1371,6 +1535,30 @@ html.menu-open .header__menu {
 @supports not (line-height: clamp( 4.375rem , 3.3849009901rem  +  4.9504950495vw , 7.5rem )) {
     .treendy__collection__title {
       line-height: calc(4.375rem + 3.125 * (100vw - 20rem) / 63.125);
+    }
+}
+
+@supports (font-size: clamp( 0.9375rem , 0.739480198rem  +  0.9900990099vw , 1.5625rem )) {
+    .treendy__item__block .item__block__title {
+      font-size: clamp( 0.9375rem , 0.739480198rem  +  0.9900990099vw , 1.5625rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.9375rem , 0.739480198rem  +  0.9900990099vw , 1.5625rem )) {
+    .treendy__item__block .item__block__title {
+      font-size: calc(0.9375rem + 0.625 * (100vw - 20rem) / 63.125);
+    }
+}
+
+@supports (font-size: clamp( 0.625rem , 0.426980198rem  +  0.9900990099vw , 1.25rem )) {
+    .treendy__item__block .item__block__price {
+      font-size: clamp( 0.625rem , 0.426980198rem  +  0.9900990099vw , 1.25rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.625rem , 0.426980198rem  +  0.9900990099vw , 1.25rem )) {
+    .treendy__item__block .item__block__price {
+      font-size: calc(0.625rem + 0.625 * (100vw - 20rem) / 63.125);
     }
 }
 
