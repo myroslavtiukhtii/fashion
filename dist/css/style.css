@@ -384,6 +384,35 @@ html.menu-open .header__menu {
   border-radius: 45% 55% 100% 0%/0% 60% 40% 100%;
 }
 
+html.menu-open .header__item {
+  -webkit-animation: item-slide 1.3s forwards;
+          animation: item-slide 1.3s forwards;
+  opacity: 0;
+  -webkit-transform: translate(-50px, 0);
+      -ms-transform: translate(-50px, 0);
+          transform: translate(-50px, 0);
+}
+
+html.menu-open .header .header__item:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+html.menu-open .header .header__item:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+html.menu-open .header .header__item:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+html.menu-open .header .header__item:nth-child(4) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
 .icon-menu {
   display: none;
 }
@@ -802,13 +831,6 @@ html.menu-open .header__menu {
   -webkit-transition: 0.3s ease-in;
   -o-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
-  -webkit-filter: grayscale(0.4);
-          filter: grayscale(0.4);
-}
-
-.treendy__gallery [class*=__image]:hover {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
 }
 
 .treendy__item__first {
@@ -1334,6 +1356,22 @@ html.menu-open .header__menu {
     color: unset;
     -webkit-transform: translate(0);
             transform: translate(0);
+  }
+}
+
+@-webkit-keyframes item-slide {
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+
+@keyframes item-slide {
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
 }
 
@@ -1934,9 +1972,9 @@ html.menu-open .header__menu {
     min-height: 100dvh;
     min-height: 100vh;
     background-color: #dfe5ff;
-    -webkit-transition: 0.3s ease-in;
-    -o-transition: 0.3s ease-in;
-    transition: 0.3s ease-in;
+    -webkit-transition: 0.5s ease-in;
+    -o-transition: 0.5s ease-in;
+    transition: 0.5s ease-in;
     z-index: 4;
   }
 
