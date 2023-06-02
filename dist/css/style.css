@@ -174,6 +174,26 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 
+.start__layer--left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #8397EA;
+  z-index: 99;
+}
+
+.start__layer--right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #ebc2fd;
+  z-index: 99;
+}
+
 @-webkit-keyframes pulse {
   0% {
     -webkit-box-shadow: 0 0 0 0 #fff;
@@ -642,8 +662,6 @@ html.menu-open .header .header__item:nth-child(4) {
   font-style: normal;
   font-weight: 400;
   max-width: 740px;
-  -webkit-animation: titleOpen 0.2s linear 1;
-          animation: titleOpen 0.2s linear 1;
 }
 
 .no-webp .about__title--first::after{

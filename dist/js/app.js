@@ -96,6 +96,44 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(".start__layer--left", {
+        xPercent: 100,
+        duration: 4,
+        opacity: .9,
+        scrollTrigger: {
+            trigger: ".start__layer--left",
+            start: "top center",
+            end: "bottom center",
+            scrub: false,
+            pin: false
+        }
+    });
+    gsap.to(".start__layer--right", {
+        xPercent: -100,
+        duration: 3,
+        opacity: .9,
+        scrollTrigger: {
+            trigger: ".start__layer--right",
+            start: "top center",
+            end: "bottom center",
+            scrub: false,
+            pin: false
+        }
+    });
+    gsap.timeline({
+        delay: 15,
+        scrollTrigger: {
+            trigger: ".about__title",
+            start: "top top",
+            end: "+=10",
+            scrub: 1,
+            pin: true
+        }
+    }).to(".about__title", {
+        x: -100,
+        opacity: 0
+    });
     window["FLS"] = true;
     isWebp();
     menuInit();
